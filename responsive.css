@@ -154,6 +154,12 @@
 
 
 @media(max-width: 578px) {
+    .cart {
+        height: 600px;
+        width: 300px;
+    }
+
+
     .hero__text {
         font-size: 18px;
     }
