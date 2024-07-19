@@ -1,8 +1,9 @@
+
+
 const productsContainer = document.querySelector('.products__container')
 const productsNewContainer = document.querySelector('.products__new__section')
 const productsCategories = document.querySelector('.products__categories')
 const category = document.querySelectorAll('.category')
-const viewMore = document.querySelector('.view__more')
 const cartLabel = document.querySelector('.cart__label')
 const cartMenu = document.querySelector('.cart') 
 const cartContainer = document.querySelector('.cart__container')
@@ -32,6 +33,10 @@ const createProductsNewTemplate = (product) => {
                     </div>
                 </div>    
     `
+}
+
+const renderNewProducts = (products) => {
+    productsNewContainer.innerHTML = products.map(createProductsNewTemplate).join("");
 }
 
   const createProductTemplate = (product) => {
@@ -64,26 +69,10 @@ const createProductsNewTemplate = (product) => {
   }
 
 
+
 const renderProducts = (products) => {
     productsContainer.innerHTML += products.map(createProductTemplate).join("");
-    productsNewContainer.innerHTML = products.map(createProductsNewTemplate).join("");
-
-    // for(let i = 0; i < 6; i++) {
-    //     const {name, prize, category, cardImg} = products[i];
-    //     productsContainer.innerHTML += `
-    //     <div class="products__cards">
-    //     <img src=" ${cardImg} " alt="">
-    //          <h3> ${name} </h3>
-    //          <div class="products__description">
-    //              <p class="gray__text"> ${category} </p>
-    //              <span class="products__prize"> $${prize}  </span>       
-    //          </div>
-    //          <button class="products__btn">Añadir</button>
-    
-    //      </div> 
-    //     `;
-    // }
-    
+     
 }
 
 const isInactiveFilter = (element) => {
@@ -123,14 +112,14 @@ const applyFilter = (e) => {
     renderProducts(appState.products[0])
 }
 
-const viewMoreProducts = () => {
-    appState.currentProductsIndex += 1
-    let { products, currentProductsIndex, productsLimit } = appState;
-    renderProducts(products[currentProductsIndex]);
-    if (currentProductsIndex === productsLimit - 1) {
-        viewMore.classList.add("hidden");
-      }
-}
+// const viewMoreProducts = () => {
+//     appState.currentProductsIndex += 1
+//     let { products, currentProductsIndex, productsLimit } = appState;
+//     renderProducts(products[currentProductsIndex]);
+//     if (currentProductsIndex === productsLimit - 1) {
+//         viewMore.classList.add("hidden");
+//       }
+// }
 
 //Logica menu
 
@@ -140,17 +129,19 @@ const menuToggle = () => {
         cartMenu.classList.remove('open-cart')
         return
     }
+
 }
 
 //Funcion para mostrar u ocultar el carro
 
 const cartToggle = () => {
-    cartMenu.classList.toggle('open-cart')
-    if(menuNav.classList.contains('open__menu')){
-        menuNav.classList.remove('open__menu')
-       
+
+    cartMenu.classList.toggle('open-cart');
+    if (menuNav.classList.contains('open__menu')) {
+        menuNav.classList.remove('open__menu');
+        return
     }
-    // return
+ 
 }
 
 //Funcion para cerrar el menu
@@ -346,7 +337,7 @@ const cartAction = (confirmMsg, successMsg) => {
 
 //Funcion para borrar productos del carro
 const deleteProducts = () => {
-    cartAction('deseas borrar el carrito?', 'No hay mas productos en el carro')
+    cartAction('deseas vaciar el carrito?', 'No hay mas productos en el carro')
 }
 
 const completeBuy = () => {
@@ -356,9 +347,9 @@ const completeBuy = () => {
 const init = () => {
     
     renderProducts(appState.products[0])
-
+    renderNewProducts(appState.products[0])
     productsCategories.addEventListener('click', applyFilter)
-    viewMore.addEventListener('click', viewMoreProducts);
+    // viewMore.addEventListener('click', viewMoreProducts);
     cartLabel.addEventListener('click', cartToggle);
     menuLabel.addEventListener('click', menuToggle)
     menuNav.addEventListener('click', closeOnClick)

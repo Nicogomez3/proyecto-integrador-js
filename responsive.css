@@ -92,11 +92,18 @@
 
     }
 
+    .products__new__section {
+    
+        width: 500px;
+    }
+
     .products__container {
         display: flex;
         flex-direction: column;
     
     }
+
+
 
     .products__cards:nth-child(1) img {
         width: 250px;
@@ -186,7 +193,8 @@
 
        /*PRODUCTS SECTION*/
     .products__new__section {
-        flex-direction: column;
+    
+        width: 370px;
     }
 
     .products__section {
@@ -244,6 +252,11 @@
     /*PRODUCTS NEW SECTION*/
     .products__new__section {
         gap: 110px; 
+    }
+
+    .products__new__section {
+    
+        width: 290px;
     }
 
     /*FOOTER*/

@@ -83,7 +83,7 @@ const productsData = [
     },
     {
         "id": 11,
-        "name": "Whirlpool WRB322DMBM Refrigerator",
+        "name": "Whirlpool Refrigerator",
         "prize": "359999",
         "user": "Laura Garcia",
         "category": "electrodomésticos",
@@ -169,24 +169,24 @@ const productsData = [
 
 
 
-const divideProductsInParts = (size) => {
-    let productsList = []
+ const divideProductsInParts = (size) => {
+     let productsList = []
   
-    for(let i = 0; i < productsData.length; i += size){
-      productsList.push(productsData.slice(i, i + size))
-    }
+     for(let i = 0; i < productsData.length; i += size){
+       productsList.push(productsData.slice(i, i + size))
+     }
   
-    return productsList
-  }
+     return productsList
+   }
   
-  // console.log(divideProductsInParts(6))
+    //console.log(divideProductsInParts(6))
   
-  // MAGIC STRINGS
-  const PRODUCTS_SIZE = 5
+   // MAGIC STRINGS
+   const PRODUCTS_SIZE = 5
 
-const appState = {
-    products: divideProductsInParts(PRODUCTS_SIZE),
-    currentProductsIndex: 0,
-    productsLimit: divideProductsInParts(PRODUCTS_SIZE).length,
-    activeFilter: null,
-  }
+ const appState = {
+     products: divideProductsInParts(PRODUCTS_SIZE),
+     currentProductsIndex: 0,
+     productsLimit: divideProductsInParts(PRODUCTS_SIZE).length,
+     activeFilter: null,
+   }

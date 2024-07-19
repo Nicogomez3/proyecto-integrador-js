@@ -15,10 +15,6 @@
 /*MENU TOGGLE*/
 
 
-.show-overlay {
-    display: block;
-}
-
 
 .menu__label {
     display: none;
@@ -26,6 +22,22 @@
 
 
 /*CART TOGGLE*/
+
+
+.cart__container::-webkit-scrollbar {
+    width: 4px;             
+  }
+  
+  .cart__container::-webkit-scrollbar-track {
+    background: #ED8F03;  
+  }
+  
+  .cart__container::-webkit-scrollbar-thumb {
+    background-color: #264653;    
+    border-radius: 20px;    
+    border: 3px solid #264653;  
+  }
+
 
 
 
@@ -39,12 +51,12 @@
     gap: 20px;
     overflow: scroll;
     height: 800px;
-
+    overflow-x: hidden;
+    padding: 20px;
 }
 
 .cart {
-    overflow: scroll;
-    overflow-y: scroll;
+ 
     height: 800px;
     gap: 20px;
     position: absolute;
