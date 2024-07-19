@@ -25,31 +25,51 @@
 
 
 @media(max-width: 992px) {
-    .menu-toggle {
+    .menu__label {
         display: flex;
-    }
+        cursor: pointer;
+        color: white;
+        align-items: center;
+      }
+
+ 
 
     .navbar__menu {
         flex-direction: column;
         position: absolute;
-        top: 56px;
+        top: 68px;
         left: 5%;
         background-color: rgb(255, 187, 27);
         width: 90%;
         padding: 20px;
         display: none;
+ 
     }
-
-    #menu-toggle:checked ~ .navbar__menu {
+    
+    .open__menu {
         display: flex;
-    }
+      
+    }  
 
-    .navbar i {
-        display: block;
+    .navbar {
+        gap: 10px;
+        padding: 20px 0;
     }
 
     .logos__container {
         height: 110px;
+    }
+
+    .jbl {
+        width: 35px;
+    }
+
+    .panasonic {
+        width: 70px;
+    }
+
+    .samsung {
+        width: 70px;
     }
 
     /* ABOUT CONTAINER*/
@@ -64,6 +84,7 @@
         flex-direction: column;
         text-align: center;
         gap: 10px;
+        margin-top: 40px;
     }
 
     .about__img img {
@@ -75,6 +96,13 @@
         display: flex;
         flex-direction: column;
     
+    }
+
+    .products__cards:nth-child(1) img {
+        width: 250px;
+        place-items: center;
+        height: 500px;
+        object-fit: none;
     }
 
     .products__cards img {
@@ -123,6 +151,18 @@
         font-size: 18px;
     }
 
+    .jbl {
+        width: 35px;
+    }
+
+    .panasonic {
+        width: 70px;
+    }
+
+    .samsung {
+        width: 70px;
+    }
+
     .text__gradient {
         font-size: 56px;
     }
@@ -137,7 +177,7 @@
     .about__container {
         padding: 0;
         margin: 0;
-
+        margin-top: 40px;
     }
 
     .about__parragraph {
@@ -167,6 +207,10 @@
     .footer__section {
         height: 475px;
     }
+
+    .footer__text {
+        text-align: center;
+    }
 }
 
 @media(max-width: 450px) {
@@ -179,11 +223,16 @@
     }
 
     /*LOGOS*/
-    .logos__row .logos__img {
-        width: 55px;
-    }
+    /* .logos__img {
+        width: 60px;
+    } */
 
     /*ABOUT CONTAINER*/
+    .about__container {
+        margin-top: 90px;
+
+    }
+
     .about__parragraph {
         width: 250px;
     }
@@ -209,9 +258,9 @@
 
 @media(max-width: 320px) {
       /*LOGOS*/
-      .logos__row .logos__img {
+      /* .logos__img {
         width: 45px;
-    }
+    } */
 
     .about__img img {
         width: 250px;

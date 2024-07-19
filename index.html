@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="responsive.css">
     <title>Proyecto Integrador - TecnoShop</title>
 </head>
-<body>
+<body >
     <header>
         <a href="" class="navbar__logo">TecnoShop</a>
-        <nav class="navbar">
-            <label for="menu-toggle" class="menu-toggle"> 
+        <nav class="navbar"> 
+            <div class="menu__label">
                 <i class="fa-solid fa-bars"></i>
-            </label>
-            <input type="checkbox" id="menu-toggle">
+            </div>          
             <ul class="navbar__menu">
                 <li class="navbar__links"><a href="">Inicio</a></li>
                 <li class="navbar__links"><a href="">Servicios</a></li>
@@ -26,16 +25,15 @@
                 <li class="navbar__links"><a href="">Registrate</a></li> -->
             </ul>
             <div class="cart__label">
-                <label for="cart-toggle" class="cart-toggle">
+  
                     <i class="fa-solid fa-cart-shopping icon__cart">
                         <div class="cart__bubble">0</div>
                     </i>
-                </label>
-                <input type="checkbox" id="cart-toggle">
+    
                 <div class="cart">
                     <h2>Tus Productos</h2>
                     <div class="cart__container">
-                        <div class="cart__item">
+                        <!-- <div class="cart__item">
                             <img src="./assets/img/s-l1600.jpg" alt="">
                             <div class="item__info">
                                 <h3 class="item__title">Samsung Galaxy A54</h3>
@@ -47,103 +45,7 @@
                                 <span class="item__quantity">1</span>
                                 <span class="quantity__handler up">+</span>
                             </div>
-                        </div>
-                    </div>
-    
-                    <div class="cart__container">
-                        <div class="cart__item">
-                            <img src="./assets/img/s-l1600.jpg" alt="">
-                            <div class="item__info">
-                                <h3 class="item__title">Samsung Galaxy A54</h3>
-                                <p class="item__bid">En Oferta!</p>
-                                <span class="item__prize">$820.000</span>
-                            </div>
-                            <div class="item__handler">
-                                <span class="quantity__handler down">-</span>
-                                <span class="item__quantity">1</span>
-                                <span class="quantity__handler up">+</span>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="cart__container">
-                        <div class="cart__item">
-                            <img src="./assets/img/s-l1600.jpg" alt="">
-                            <div class="item__info">
-                                <h3 class="item__title">Samsung Galaxy A54</h3>
-                                <p class="item__bid">En Oferta!</p>
-                                <span class="item__prize">$820.000</span>
-                            </div>
-                            <div class="item__handler">
-                                <span class="quantity__handler down">-</span>
-                                <span class="item__quantity">1</span>
-                                <span class="quantity__handler up">+</span>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="cart__container">
-                        <div class="cart__item">
-                            <img src="./assets/img/s-l1600.jpg" alt="">
-                            <div class="item__info">
-                                <h3 class="item__title">Samsung Galaxy A54</h3>
-                                <p class="item__bid">En Oferta!</p>
-                                <span class="item__prize">$820.000</span>
-                            </div>
-                            <div class="item__handler">
-                                <span class="quantity__handler down">-</span>
-                                <span class="item__quantity">1</span>
-                                <span class="quantity__handler up">+</span>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="cart__container">
-                        <div class="cart__item">
-                            <img src="./assets/img/s-l1600.jpg" alt="">
-                            <div class="item__info">
-                                <h3 class="item__title">Samsung Galaxy A54</h3>
-                                <p class="item__bid">En Oferta!</p>
-                                <span class="item__prize">$820.000</span>
-                            </div>
-                            <div class="item__handler">
-                                <span class="quantity__handler down">-</span>
-                                <span class="item__quantity">1</span>
-                                <span class="quantity__handler up">+</span>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="cart__container">
-                        <div class="cart__item">
-                            <img src="./assets/img/s-l1600.jpg" alt="">
-                            <div class="item__info">
-                                <h3 class="item__title">Samsung Galaxy A54</h3>
-                                <p class="item__bid">En Oferta!</p>
-                                <span class="item__prize">$820.000</span>
-                            </div>
-                            <div class="item__handler">
-                                <span class="quantity__handler down">-</span>
-                                <span class="item__quantity">1</span>
-                                <span class="quantity__handler up">+</span>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="cart__container">
-                        <div class="cart__item">
-                            <img src="./assets/img/s-l1600.jpg" alt="">
-                            <div class="item__info">
-                                <h3 class="item__title">Samsung Galaxy A54</h3>
-                                <p class="item__bid">En Oferta!</p>
-                                <span class="item__prize">$820.000</span>
-                            </div>
-                            <div class="item__handler">
-                                <span class="quantity__handler down">-</span>
-                                <span class="item__quantity">1</span>
-                                <span class="quantity__handler up">+</span>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
     
                     <span class="divider"></span>
@@ -153,14 +55,13 @@
                         <span class="total">$850.000</span>
                     </div>
                     <div class="cart__btn">
-
                         <button class="btn__buy">Comprar</button>
                         <button class="btn__delete">Vaciar</button>
                     </div>
                 </div>
             </div>
 
-            <div class="overlay"></div>
+
         </nav>
     </header>
     <main>
@@ -177,9 +78,60 @@
         <section class="logos__container">
             <div class="logos__row">
                 <img class="logos__img" src="./assets/img/apple.png" alt="apple">
-                <img class="logos__img" src="./assets/img/samsung.png" alt="samsung">
+                <img class="logos__img samsung" src="./assets/img/samsung.png" alt="samsung">
                 <img class="logos__img" src="./assets/img/motorola.png" alt="moto">
-                <img class="logos__img" src="./assets/img/redmi.png" alt="redmi">
+                <img class="logos__img" src="./assets/img/sony.png" alt="sony">
+                <img class="logos__img" src="./assets/img/tcl.png" alt="tcl">
+                <img class="logos__img" src="./assets/img/LG.png" alt="lg">
+                <img class="logos__img" src="./assets/img/philips.png" alt="philips" >
+                <img class="logos__img panasonic" src="./assets/img/panasonic.png" alt="panasonic" >
+                <img class="logos__img jbl" src="./assets/img/jbl.png" alt="jbl" >
+                <img class="logos__img" src="./assets/img/apple.png" alt="apple">
+                <img class="logos__img samsung" src="./assets/img/samsung.png" alt="samsung">
+                <img class="logos__img" src="./assets/img/motorola.png" alt="moto">
+                <img class="logos__img" src="./assets/img/sony.png" alt="sony">
+                <img class="logos__img" src="./assets/img/tcl.png" alt="tcl">
+                <img class="logos__img" src="./assets/img/LG.png" alt="lg">
+                <img class="logos__img" src="./assets/img/philips.png" alt="philips" >
+                <img class="logos__img panasonic" src="./assets/img/panasonic.png" alt="panasonic" >
+                <img class="logos__img jbl" src="./assets/img/jbl.png" alt="jbl" >
+                <img class="logos__img" src="./assets/img/apple.png" alt="apple">
+                <img class="logos__img samsung" src="./assets/img/samsung.png" alt="samsung">
+                <img class="logos__img" src="./assets/img/motorola.png" alt="moto">
+                <img class="logos__img" src="./assets/img/sony.png" alt="sony">
+                <img class="logos__img" src="./assets/img/tcl.png" alt="tcl">
+                <img class="logos__img" src="./assets/img/LG.png" alt="lg">
+                <img class="logos__img" src="./assets/img/philips.png" alt="philips" >
+                <img class="logos__img panasonic" src="./assets/img/panasonic.png" alt="panasonic" >
+                <img class="logos__img jbl" src="./assets/img/jbl.png" alt="jbl" >
+                <img class="logos__img" src="./assets/img/apple.png" alt="apple">
+                <img class="logos__img samsung" src="./assets/img/samsung.png" alt="samsung">
+                <img class="logos__img" src="./assets/img/motorola.png" alt="moto">
+                <img class="logos__img" src="./assets/img/sony.png" alt="sony">
+                <img class="logos__img" src="./assets/img/tcl.png" alt="tcl">
+                <img class="logos__img" src="./assets/img/LG.png" alt="lg">
+                <img class="logos__img" src="./assets/img/philips.png" alt="philips" >
+                <img class="logos__img panasonic" src="./assets/img/panasonic.png" alt="panasonic" >
+                <img class="logos__img jbl" src="./assets/img/jbl.png" alt="jbl" >
+                <img class="logos__img" src="./assets/img/apple.png" alt="apple">
+                <img class="logos__img samsung" src="./assets/img/samsung.png" alt="samsung">
+                <img class="logos__img" src="./assets/img/motorola.png" alt="moto">
+                <img class="logos__img" src="./assets/img/sony.png" alt="sony">
+                <img class="logos__img" src="./assets/img/tcl.png" alt="tcl">
+                <img class="logos__img" src="./assets/img/LG.png" alt="lg">
+                <img class="logos__img" src="./assets/img/philips.png" alt="philips" >
+                <img class="logos__img panasonic" src="./assets/img/panasonic.png" alt="panasonic" >
+                <img class="logos__img jbl" src="./assets/img/jbl.png" alt="jbl" >
+                <img class="logos__img" src="./assets/img/apple.png" alt="apple">
+                <img class="logos__img samsung" src="./assets/img/samsung.png" alt="samsung">
+                <img class="logos__img" src="./assets/img/motorola.png" alt="moto">
+                <img class="logos__img" src="./assets/img/sony.png" alt="sony">
+                <img class="logos__img" src="./assets/img/tcl.png" alt="tcl">
+                <img class="logos__img" src="./assets/img/LG.png" alt="lg">
+                <img class="logos__img" src="./assets/img/philips.png" alt="philips" >
+                <img class="logos__img panasonic" src="./assets/img/panasonic.png" alt="panasonic" >
+                <img class="logos__img jbl" src="./assets/img/jbl.png" alt="jbl" >
+                
             </div>
         </section>
         <section class="about__container">
@@ -203,32 +155,21 @@
                 </h2>
             </div>
             <div class="products__new__section"> 
-                <div class="products__new__cards">
+                <!-- <div class="products__new__cards">
                     <img src="./assets/img/s-l1600 copia.png" alt="">
                     <h3>Samsung A54 5G</h3>
                     <div class="products__description">
                         <p class="gray__text">Celular / 256GB</p>
                     </div>
-                </div>    
-                <div class="products__new__cards">
-                    <img src="./assets/img/s-l1600.jpg" alt="">
-                    <h3>Samsung A54 5G</h3>
-                    <div class="products__description">
-                        <p class="gray__text">Celular / 256GB</p>
-                    </div>
-                </div>    
-                <div class="products__new__cards">
-                    <img src="./assets/img/s-l1600.jpg" alt="">
-                    <h3>Samsung A54 5G</h3>
-                    <div class="products__description">
-                        <p class="gray__text">Celular / 256GB</p>
-                    </div>
-                </div>
+                </div>     
+-->
             </div>    
         </section>
         <section class="categories__container">
             <div class="products__categories">
-                <button class="category active">Celulares</button>
+                <button class="category active">Todo</button>
+                <button class="category" data-category="celular">Celular</button>
+
                 <button class="category" data-category="monitores y tv">TV y Monitores</button>
                 <button class="category " data-category="electrodomésticos">Electrodomesticos</button>
                 <button class="category" data-category="auriculares">Auriculares</button>
@@ -394,8 +335,7 @@
                     </div>
                 </div>
             </footer>
-            </div>
-
+            <div class="add--modal"></div>
 
     </main>
     <script src="./assets/js/data.js"></script>

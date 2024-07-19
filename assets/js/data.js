@@ -47,7 +47,7 @@ const productsData = [
         "prize": "299999",
         "user": "Luis Fernandez",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/samsung-qled-65.jpg"
+        "cardImg": "./assets/img/products/samsung-qled-65.png"
     },
     {
         "id": 7,
@@ -55,7 +55,7 @@ const productsData = [
         "prize": "64999",
         "user": "Daniel Herrera",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/samsung-curved-32.jpg"
+        "cardImg": "./assets/img/products/samsung-curved-32 copia.png"
     },
     {
         "id": 8,
@@ -63,7 +63,7 @@ const productsData = [
         "prize": "299999",
         "user": "Patricia Ortiz",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/lg-oled-55.jpg"
+        "cardImg": "./assets/img/products/lg-oled-55 copia.png"
     },
     {
         "id": 9,
@@ -71,7 +71,7 @@ const productsData = [
         "prize": "89999",
         "user": "Marta Alvarez",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/hyundai-50-4k.jpg"
+        "cardImg": "./assets/img/products/hyundai-50-4k copia.png"
     },
     {
         "id": 10,
@@ -87,7 +87,7 @@ const productsData = [
         "prize": "359999",
         "user": "Laura Garcia",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/whirlpool-wrb322.jpeg"
+        "cardImg": "./assets/img/products/whirlpool-wrb322.png"
     },
     {
         "id": 12,
@@ -95,7 +95,7 @@ const productsData = [
         "prize": "249999",
         "user": "Jorge Sanchez",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/lg-air.conditioner.jpeg"
+        "cardImg": "./assets/img/products/lg-air.conditioner.png"
     },
     {
         "id": 13,
@@ -103,7 +103,7 @@ const productsData = [
         "prize": "24999",
         "user": "Roberto Diaz",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/philips-air-fryer.jpeg"
+        "cardImg": "./assets/img/products/philips-air-fryer.png"
       
     },
     {
@@ -112,19 +112,11 @@ const productsData = [
         "prize": "19999",
         "user": "Veronica Mendez",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/whirlpool-microwave.webp"
+        "cardImg": "./assets/img/products/whirlpool-microwave.png"
     },
+    
     {
         "id": 15,
-        "name": "Panasonic 42L Microwave Oven",
-        "prize": "39999",
-        "user": "Gabriel Reyes",
-        "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/panasonic-microwave.webp"
-   
-    },
-    {
-        "id": 16,
         "name": "Samsung Washing Machine",
         "prize": "129999",
         "user": "Ricardo Morales",
@@ -133,12 +125,21 @@ const productsData = [
         
     },
     {
-        "id": 17,
+        "id": 16,
         "name": "Samsung Galaxy Buds Pro",
         "prize": "69999",
         "user": "Sofia Ruiz",
         "category": "auriculares",
-        "cardImg": "./assets/img/products/samsung-galaxy-buds-pro.jpeg"
+        "cardImg": "./assets/img/products/samsung-galaxy-buds-pro copia.png"
+    },
+
+    {
+        "id": 17,
+        "name": "Samsung Galaxy Buds Pro2",
+        "prize": "69999",
+        "user": "Sofia Ruiz",
+        "category": "auriculares",
+        "cardImg": "./assets/img/products/samsung-buds-pro2.png"
     },
     {
         "id": 18,
@@ -146,7 +147,7 @@ const productsData = [
         "prize": "89999",
         "user": "Hernan Gomez",
         "category": "auriculares",
-        "cardImg": "./assets/img/products/apple-airpods-pro.jpeg"
+        "cardImg": "./assets/img/products/apple-airpods-pro copia.png"
     },
     {
         "id": 19,
@@ -181,7 +182,7 @@ const divideProductsInParts = (size) => {
   // console.log(divideProductsInParts(6))
   
   // MAGIC STRINGS
-  const PRODUCTS_SIZE = 3
+  const PRODUCTS_SIZE = 5
 
 const appState = {
     products: divideProductsInParts(PRODUCTS_SIZE),
