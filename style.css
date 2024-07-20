@@ -66,6 +66,7 @@
     right: 0;
     top: 65px;
     padding: 20px;
+    border-bottom-left-radius: 14px;
     transform: translate(200%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     background: #FFB75E;  /* fallback for old browsers */
@@ -92,6 +93,7 @@
     display: flex;
     padding: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .item__handler {
