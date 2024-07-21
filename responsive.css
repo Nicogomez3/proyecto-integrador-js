@@ -79,19 +79,19 @@
         z-index: 2;
     }
 
-    .navbar__menu li:nth-child(1) a::before {
+    .navbar__menu li:nth-child(1) a:hover {
         color: hsl(267 60% 76% / 0.4);
       }
-      .navbar__menu li:nth-child(2) a::before {
+      .navbar__menu li:nth-child(2) a:hover {
         color: hsl(174 60% 43% / 0.4);
       }
-      .navbar__menu li:nth-child(3) a::before {
+      .navbar__menu li:nth-child(3) a:hover {
         color: hsl(258 60% 35% / 0.4);
       }
-      .navbar__menu li:nth-child(4) a::before {
+      .navbar__menu li:nth-child(4) a:hover {
         color: hsl(349 52% 61% / 0.4);
       }
-      .navbar__menu li:nth-child(5) a::before {
+      .navbar__menu li:nth-child(5) a:hover {
         color: hsl(29 60% 70% / 0.5);
       }
 

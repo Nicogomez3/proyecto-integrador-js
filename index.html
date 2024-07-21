@@ -16,10 +16,10 @@
                 <i class="fa-solid fa-bars"></i>
             </div>          
             <ul class="navbar__menu">
-                <li class="navbar__links"><a data-text="Inicio" href="">Inicio</a></li>
-                <li class="navbar__links"><a data-text="Servicios" href="">Servicios</a></li>
-                <li class="navbar__links"><a data-text="Quienes somos" href="">Quienes somos</a></li>
-                <li class="navbar__links"><a data-text="Contacto" href="">Contacto</a></li> 
+                <li class="navbar__links"><a data-text="Inicio" href="#home">Inicio</a></li>
+                <li class="navbar__links"><a data-text="Productos" href="#products">Productos</a></li>
+                <li class="navbar__links"><a data-text="Quienes somos" href="#about">Quienes somos</a></li>
+                <li class="navbar__links"><a data-text="Contacto" href="#contact">Contacto</a></li> 
 
                 <!-- <li class="navbar__links active aquamarine"><a href="">Iniciar Sesión</a></li>
                 <li class="navbar__links"><a href="">Registrate</a></li> -->
@@ -66,7 +66,15 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+
+            <div class="modal__cart">
+                <h2>Seguro que quieres vaciar el carro?</h2>
+                <button class="btn__modal">Vaciar</button>
+                <button class="btn__modal">Cancelar</button>
+            </div>
+
+
+        <section id="home" class="hero">
             <div class="hero__text">
                 <h2 class="hero__title">Construyendo hogares felices, en </h2>
                 <span class="text__gradient">TecnoShop.</span>
@@ -135,7 +143,7 @@
                 
             </div>
         </section>
-        <section class="about__container">
+        <section id="about" class="about__container">
             <div class="about__title">
                 <h2 class="about__text">Quienes Somos?</h2>
                 <p class="about__parragraph">
@@ -176,7 +184,7 @@
                 <button class="category" data-category="auriculares">Auriculares</button>
             </div>
         </section>
-        <section class="products__section">
+        <section id="products" class="products__section">
             <div class="products__titles">
                 <h2 class="products__title">
                     Productos
@@ -263,7 +271,7 @@
             </div>
     
         </section>
-        <section class="form__container">
+        <section id="contact" class="form__container">
             <div class="form__title">
                 <h2>Contactanos</h2>
             </div>
