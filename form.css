@@ -1,0 +1,25 @@
+.form__inputs.error input {
+    border: 3px solid #dc3545;
+    background-color: #d16974;
+}
+
+.form__inputs small {
+    color: #dc3545;
+    max-width: 350px;
+    text-align: center;
+    display: none;
+    margin-top: 5px;
+  }
+
+  .form__inputs.success input {
+    border: 3px solid #28a745;
+    background-color: #73ec8f;
+  }
+
+  #form__error {
+    color: #dc3545;
+    font-size: 1rem;
+    margin: 8px 0px;
+    max-width: 350px;
+    text-align: center;
+  } 

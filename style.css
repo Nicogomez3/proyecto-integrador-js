@@ -47,7 +47,7 @@
     display: none;
 } */
 
-.modal__cart {
+#modalCart {
     display: none;
     position: fixed;
     background-color: white;

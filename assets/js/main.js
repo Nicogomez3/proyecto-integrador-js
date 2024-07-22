@@ -14,6 +14,7 @@ const bubbleCart = document.querySelector('.cart__bubble')
 const successMesssage = document.querySelector('.add--modal')
 const btnBuy = document.querySelector('.btn__buy')
 const btnDelete = document.querySelector('.btn__delete')
+const modalCart = document.getElementById('modalCart')
 //SET DEL CARRITO
 
 let cart = JSON.parse(localStorage.getItem("cart")) || []
@@ -325,6 +326,8 @@ const resetCart = () => {
     cart = []
     updateCartState()
 }
+
+
 //Funcion para enviar mensaje para borrar/comprar
 const cartAction = (confirmMsg, successMsg) => {
     if(!cart.length) return

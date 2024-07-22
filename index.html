@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="form.css">
     <title>Proyecto Integrador - TecnoShop</title>
 </head>
 <body >
@@ -67,10 +68,14 @@
     </header>
     <main>
 
-            <div class="modal__cart">
-                <h2>Seguro que quieres vaciar el carro?</h2>
-                <button class="btn__modal">Vaciar</button>
-                <button class="btn__modal">Cancelar</button>
+            <div id="modalCart" class="modal__cart">
+                <div class="modal__content">
+                    <span id="modalCartClose">&times;</span>
+                    <h2 id="modalCartMessage">Seguro que quieres vaciar el carro?</h2>
+                    <button id="modalConfirm" class="btn__modal">Vaciar</button>
+                    <button id="modalCancel" class="btn__modal">Cancelar</button>
+
+                </div>
             </div>
 
 
@@ -271,38 +276,38 @@
             </div>
     
         </section>
-        <section id="contact" class="form__container">
+        <form id="contact" class="form__container" novalidate>
             <div class="form__title">
                 <h2>Contactanos</h2>
             </div>
             <div class="form__inputs">
                 <label for="text"></label>
                 <input type="text" id="nameInput" placeholder="Nombre">
+                <small></small>
             </div>
-
             <div class="form__inputs">
                 <label for="text"></label>
                 <input type="text" id="lastNameInput" placeholder="Apellido">
+                <small></small>
             </div>
-
             <div class="form__inputs">
                 <label for="email"></label>
                 <input type="email" id="emailInput" placeholder="Correo Electronico">
+                <small></small>
             </div>
-
             <div class="form__inputs">
 
                 <label for="number"></label>
-                <input type="number" id="numberInput" placeholder="Telefono / Celular">
+                <input type="number" id="phoneInput" placeholder="Telefono / Celular">
+                <small></small>
             </div>
-
             <div class="form__inputs">
                 <textarea class="message__area" name="textAreaInput" id="textAreaInput" placeholder="Escribe tu mensajes aqui..."></textarea>
+                <small></small>
             </div>
+            <input type="submit" id="submitBtn" class="btn__submit" value="enviar">
 
-            <button type="submit" id="submitBtn" class="btn__submit">Enviar</button>
-
-        </section>
+        </form>
         <footer class="footer__section">
             <div class="footer__text">
                 <div class="footer__info">
@@ -347,7 +352,9 @@
             <div class="add--modal"></div>
 
     </main>
+
     <script src="./assets/js/data.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/form.js"></script>
 </body>
 </html>
