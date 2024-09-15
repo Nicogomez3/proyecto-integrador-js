@@ -47,17 +47,26 @@
     display: none;
 } */
 
-#modalCart {
+
+
+/*MODAL TOGGLE*/    
+
+#confirmationModal,
+#successModal {
     display: none;
     position: fixed;
     background-color: white;
     color: #264653;
-    top: 150px;
-    right: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     border-radius: 12px;
     padding: 20px;
-    z-index: 10;
-    transform: translate(400%);
+    z-index: 999;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo del modal */
+    /* transform: translate(400%); */
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     box-shadow: 1px 5px 29px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 1px 5px 29px 0px rgba(0,0,0,0.75);
@@ -65,7 +74,7 @@
 }
 
 .open__modal__cart {
-    transform: translate(0%);
+    transform: translate(-50%, -50%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
@@ -77,10 +86,11 @@
     height: 800px;
     overflow-x: hidden;
     padding: 20px;
+    
 }
 
 .cart {
- 
+    display: none;
     height: 800px;
     gap: 20px;
     position: absolute;
@@ -117,7 +127,7 @@
     display: flex;
     padding: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .item__handler {
@@ -237,7 +247,9 @@
     color: white;
 }
 
-.btn__modal {
+#confirmButton,
+#cancelButton,
+#closeSuccessButton {
     background-color: #264653;
     padding: 8px 10px;
     border: none;
@@ -249,7 +261,9 @@
 
 }
 
-.btn__modal:hover {
+#confirmButton:hover,
+#cancelButton:hover,
+#closeSuccessButton:hover {
     background-color: #fcbe72;
 }
 

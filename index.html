@@ -68,15 +68,30 @@
     </header>
     <main>
 
-            <div id="modalCart" class="modal__cart">
+            <!-- <div id="modalCart" class="modal__cart">
                 <div class="modal__content">
                     <span id="modalCartClose">&times;</span>
                     <h2 id="modalCartMessage">Seguro que quieres vaciar el carro?</h2>
-                    <button id="modalConfirm" class="btn__modal">Vaciar</button>
-                    <button id="modalCancel" class="btn__modal">Cancelar</button>
+                    <button id="confirm" class="btn__modal">Vaciar</button>
+                    <button id="cancel" class="btn__modal">Cancelar</button>
 
                 </div>
-            </div>
+            </div> -->
+
+            <div id="confirmationModal" class="modal">
+                <div class="modal-content">
+                  <p id="confirmationMessage"></p>
+                  <button id="confirmButton">Confirm</button>
+                  <button id="cancelButton">Cancel</button>
+                </div>
+              </div>
+
+            <div id="successModal" class="modal">
+                <div class="modal-content">
+                    <p id="successMessage"></p>
+                    <button id="closeSuccessButton">Cerrar</button>
+                </div>
+            </div>  
 
 
         <section id="home" class="hero">

@@ -12,9 +12,16 @@ const menuNav = document.querySelector('.navbar__menu')
 const total = document.querySelector('.total')
 const bubbleCart = document.querySelector('.cart__bubble')
 const successMesssage = document.querySelector('.add--modal')
+const successModal = document.getElementById('successModal')
+const successMessageModal = document.getElementById('successMessage')
+const closeSuccessButton = document.getElementById('closeSuccessButton')
 const btnBuy = document.querySelector('.btn__buy')
 const btnDelete = document.querySelector('.btn__delete')
-const modalCart = document.getElementById('modalCart')
+const confirmationModal = document.getElementById('confirmationModal');
+const confirmationMessage = document.getElementById('confirmationMessage');
+const confirmButton = document.getElementById('confirmButton');
+const cancelButton = document.getElementById('cancelButton');
+
 //SET DEL CARRITO
 
 let cart = JSON.parse(localStorage.getItem("cart")) || []
@@ -22,6 +29,35 @@ let cart = JSON.parse(localStorage.getItem("cart")) || []
 const saveCartLocalStorage = () => {
     localStorage.setItem("cart", JSON.stringify(cart))
 }
+
+
+const openModal = (message, onConfirm) => {
+    confirmationMessage.textContent = message;
+    confirmationModal.style.display = 'block';
+  
+    confirmButton.onclick = () => {
+      onConfirm();
+      closeModal();
+    };
+  
+    cancelButton.onclick = closeModal;
+  };
+  
+  const closeModal = () => {
+    confirmationModal.style.display = 'none';
+  };
+
+  const showSuccessModal = (message) => {
+    successMessageModal.textContent = message;
+    successModal.style.display = 'block';
+
+    closeSuccessButton.onclick = closeSuccessModal;
+  }
+
+    const closeSuccessModal = () => {
+        successModal.style.display = 'none';
+    }
+
 
 const createProductsNewTemplate = (product) => {
     const{name, cardImg, category} = product
@@ -285,10 +321,10 @@ const handleDecrement = (id) => {
     const cartProductExisting = cart.find((item) => item.id === id);
 
     if(cartProductExisting.quantity === 1) {
-        if(window.confirm('Deseas eliminar el producto?')){
-            removeProduct(cartProductExisting)
-        }
-        return
+       openModal('Deseas eliminar el producto?', () => {
+        removeProduct(cartProductExisting);
+       });
+         return;
     }
 
     subtractProductUnit(cartProductExisting)
@@ -331,11 +367,12 @@ const resetCart = () => {
 //Funcion para enviar mensaje para borrar/comprar
 const cartAction = (confirmMsg, successMsg) => {
     if(!cart.length) return
-    if(window.confirm(confirmMsg)) {
-        resetCart()
-        alert(successMsg)
-    }
-}
+    openModal(confirmMsg, () => {
+        resetCart();
+        showSuccessModal(successMsg);
+      });
+    };
+
 
 
 //Funcion para borrar productos del carro
@@ -371,4 +408,8 @@ const init = () => {
 
 init()
 
-//41:06
+
+//Modularizar
+//Mudar a vite
+//agregar animaciones
+//Cambiar el hero a un sidebar
