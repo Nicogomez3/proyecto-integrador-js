@@ -52,7 +52,8 @@
 /*MODAL TOGGLE*/    
 
 #confirmationModal,
-#successModal {
+#successModal,
+#formModal {
     display: none;
     position: fixed;
     background-color: white;
@@ -249,7 +250,9 @@
 
 #confirmButton,
 #cancelButton,
-#closeSuccessButton {
+#closeSuccessButton,
+#closeModalButton
+ {
     background-color: #264653;
     padding: 8px 10px;
     border: none;
@@ -263,7 +266,8 @@
 
 #confirmButton:hover,
 #cancelButton:hover,
-#closeSuccessButton:hover {
+#closeSuccessButton:hover,
+#closeModalButton:hover {
     background-color: #fcbe72;
 }
 
@@ -578,16 +582,99 @@ header {
     align-items: center;
     padding: 0 70px;
     margin: 0 200px;
+    position: relative;
 }
 
 .about__title {
    max-width: 450px;
 }
 
+.about__img {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+
 .about__img img {
     width: 600px;
     border-radius: 12px;
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
+    clip-path: circle(60% at 30% 30%);
 }
+
+.about__img::before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 33%;
+    height: 33%;
+    background-color: #8261f7;
+    border-radius: 50%;
+    z-index: -1; /* Coloca el blob detrás de la imagen */
+    filter: blur(50px); /* Aplica un desenfoque para suavizar los bordes del blob */
+}
+
+.about__img::after {
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: #f06bfa;
+    border-radius: 50%;
+    z-index: -1; /* Coloca el blob detrás de la imagen */
+    filter: blur(30px); /* Aplica un desenfoque para suavizar los bordes del blob */
+}
+
+/* Elementos adicionales para más blobs de colores */
+.about__img .color-spot {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1; /* Coloca los blobs detrás de la imagen */
+    filter: blur(30px); /* Aplica un desenfoque para suavizar los bordes del blob */
+}
+
+.about__img .color-spot.spot1 {
+    width: 13%;
+    height: 13%;
+    background-color: #ff9f1c;
+    top: 25%;
+    left: 66%;
+}
+
+.about__img .color-spot.spot2 {
+    width: 60px;
+    height: 60px;
+    background-color: #2ec4b6;
+    bottom: 100px;
+    right: 100px;
+}
+
+.about__img .color-spot.spot3 {
+    width: 50px;
+    height: 50px;
+    background-color: #e71d36;
+    top: 200px;
+    right: 200px;
+}
+ /* .blur--bg {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: #264653;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+
+ } */
+
+
+
+
+/* Elementos adicionales para más manchas de colores */
 
 
 /* NEW PRODUCTS SECTION */
@@ -973,14 +1060,17 @@ body::-webkit-scrollbar {
 .add--modal {
     display: flex;
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
+    right: 20px;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 50px;
-    background-color: #FFB75E;
-    color: #353535;
-    font-weight: 700;
+    width: 30%;
+    height: 110px;
+    border-radius: 12px;
+    background-color: #5eff93;
+    color: #264653;
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
     transition: all 0.5s ease-out;
     transform: translateY(200%);

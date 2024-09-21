@@ -4,7 +4,9 @@ const lastNameInput = document.getElementById('lastNameInput')
 const emailInput = document.getElementById('emailInput')
 const phoneInput = document.getElementById('phoneInput')
 const textAreaInput = document.getElementById('textAreaInput')
-
+const formModal = document.getElementById('formModal')
+const modalMessage = document.getElementById('modalMessage')
+const closeModalButton = document.getElementById('closeModalButton')
 
 const users = JSON.parse(localStorage.getItem('users')) || [];
 
@@ -143,6 +145,17 @@ const clearForm = () => {
     });
 }
 
+const openFormModal = (message) => {
+    modalMessage.textContent = message;
+    formModal.style.display = 'block';
+
+    closeModalButton.onclick = closeFormModal;
+}
+
+const closeFormModal = () => {
+    formModal.style.display = 'none';
+}
+
 
 const validateSubmit = (e) => {
     e.preventDefault()
@@ -165,7 +178,7 @@ const validateSubmit = (e) => {
             message: textAreaInput.value
         })
         saveToLocalStorage(users)
-        alert('Tu mensaje fue enviado con exito');
+        openFormModal('Tu mensaje fue enviado con exito');
         clearForm();
     }
 }

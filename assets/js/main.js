@@ -1,5 +1,3 @@
-
-
 const productsContainer = document.querySelector('.products__container')
 const productsNewContainer = document.querySelector('.products__new__section')
 const productsCategories = document.querySelector('.products__categories')
@@ -183,7 +181,7 @@ const cartToggle = () => {
 
 //Funcion para cerrar el menu
 const closeOnClick = (e) => {
-    if(!e.target.classList.contains('navbar__menu')) return;
+    if(e.target.classList.contains('navbar__menu')) return;
     menuNav.classList.remove('open__menu')
 }
 
@@ -324,7 +322,7 @@ const handleDecrement = (id) => {
        openModal('Deseas eliminar el producto?', () => {
         removeProduct(cartProductExisting);
        });
-         return;
+        return;
     }
 
     subtractProductUnit(cartProductExisting)
