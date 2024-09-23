@@ -1,11 +1,11 @@
-const productsData = [
+export const productsData = [
     {
         "id": 1,
         "name": "Samsung Galaxy S24",
         "prize": "1500000",
         "user": "Juan Perez",
         "category": "celular",
-        "cardImg": "./assets/img/products/s24 copia.png"
+        "cardImg": "/img/products/s24 copia.png"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@ const productsData = [
         "prize": "950000",
         "user": "Maria Lopez",
         "category": "celular",
-        "cardImg": "./assets/img/products/iphone13black copia.png"
+        "cardImg": "/img/products/iphone13black copia.png"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@ const productsData = [
         "prize": "900000",
         "user": "Carlos Gonzalez",
         "category": "celular",
-        "cardImg": "./assets/img/products/edge40 copia.png"
+        "cardImg": "/img/products/edge40 copia.png"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@ const productsData = [
         "prize": "500000",
         "user": "Andrea Rojas",
         "category": "celular",
-        "cardImg": "./assets/img/products/xiaomi copia.png"
+        "cardImg": "/img/products/xiaomi copia.png"
        
     },
     {
@@ -38,7 +38,7 @@ const productsData = [
         "prize": "400000",
         "user": "Rosa Castro",
         "category": "celular",
-        "cardImg": "./assets/img/products/g24 copia.png"
+        "cardImg": "/img/products/g24 copia.png"
     },
 
     {
@@ -47,7 +47,7 @@ const productsData = [
         "prize": "299999",
         "user": "Luis Fernandez",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/samsung-qled-65.png"
+        "cardImg": "/img/products/samsung-qled-65.png"
     },
     {
         "id": 7,
@@ -55,7 +55,7 @@ const productsData = [
         "prize": "64999",
         "user": "Daniel Herrera",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/samsung-curved-32 copia.png"
+        "cardImg": "/img/products/samsung-curved-32 copia.png"
     },
     {
         "id": 8,
@@ -63,7 +63,7 @@ const productsData = [
         "prize": "299999",
         "user": "Patricia Ortiz",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/lg-oled-55 copia.png"
+        "cardImg": "/img/products/lg-oled-55 copia.png"
     },
     {
         "id": 9,
@@ -71,7 +71,7 @@ const productsData = [
         "prize": "89999",
         "user": "Marta Alvarez",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/hyundai-50-4k copia.png"
+        "cardImg": "/img/products/hyundai-50-4k copia.png"
     },
     {
         "id": 10,
@@ -79,7 +79,7 @@ const productsData = [
         "prize": "129999",
         "user": "Ana Martinez",
         "category": "monitores y tv",
-        "cardImg": "./assets/img/products/tvtcl55.png"
+        "cardImg": "/img/products/tvtcl55.png"
     },
     {
         "id": 11,
@@ -87,7 +87,7 @@ const productsData = [
         "prize": "359999",
         "user": "Laura Garcia",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/whirlpool-wrb322.png"
+        "cardImg": "/img/products/whirlpool-wrb322.png"
     },
     {
         "id": 12,
@@ -95,7 +95,7 @@ const productsData = [
         "prize": "249999",
         "user": "Jorge Sanchez",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/lg-air.conditioner.png"
+        "cardImg": "/img/products/lg-air.conditioner.png"
     },
     {
         "id": 13,
@@ -103,7 +103,7 @@ const productsData = [
         "prize": "24999",
         "user": "Roberto Diaz",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/philips-air-fryer.png"
+        "cardImg": "/img/products/philips-air-fryer.png"
       
     },
     {
@@ -112,7 +112,7 @@ const productsData = [
         "prize": "19999",
         "user": "Veronica Mendez",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/whirlpool-microwave.png"
+        "cardImg": "/img/products/whirlpool-microwave.png"
     },
     
     {
@@ -121,7 +121,7 @@ const productsData = [
         "prize": "129999",
         "user": "Ricardo Morales",
         "category": "electrodomésticos",
-        "cardImg": "./assets/img/products/samsung wash.png"
+        "cardImg": "/img/products/samsung wash.png"
         
     },
     {
@@ -130,7 +130,7 @@ const productsData = [
         "prize": "69999",
         "user": "Sofia Ruiz",
         "category": "auriculares",
-        "cardImg": "./assets/img/products/samsung-galaxy-buds-pro copia.png"
+        "cardImg": "/img/products/samsung-galaxy-buds-pro copia.png"
     },
 
     {
@@ -139,7 +139,7 @@ const productsData = [
         "prize": "69999",
         "user": "Sofia Ruiz",
         "category": "auriculares",
-        "cardImg": "./assets/img/products/samsung-buds-pro2.png"
+        "cardImg": "/img/products/samsung-buds-pro2.png"
     },
     {
         "id": 18,
@@ -147,7 +147,7 @@ const productsData = [
         "prize": "89999",
         "user": "Hernan Gomez",
         "category": "auriculares",
-        "cardImg": "./assets/img/products/apple-airpods-pro copia.png"
+        "cardImg": "/img/products/apple-airpods-pro copia.png"
     },
     {
         "id": 19,
@@ -155,7 +155,7 @@ const productsData = [
         "prize": "29999",
         "user": "Diego Ramirez",
         "category": "auriculares",
-        "cardImg": "./assets/img/products/JBL_TUNE-225TWS.png"
+        "cardImg": "/img/products/JBL_TUNE-225TWS.png"
     },
     {
         "id": 20,
@@ -163,7 +163,7 @@ const productsData = [
         "prize": "99999",
         "user": "Lucia Torres",
         "category": "auriculares",
-        "cardImg": "./assets/img/products/sonywh1000x.png"
+        "cardImg": "/img/products/sonywh1000x.png"
     }
 ]
 
@@ -184,9 +184,9 @@ const productsData = [
    // MAGIC STRINGS
    const PRODUCTS_SIZE = 5
 
- const appState = {
+export const appState = {
      products: divideProductsInParts(PRODUCTS_SIZE),
      currentProductsIndex: 0,
      productsLimit: divideProductsInParts(PRODUCTS_SIZE).length,
      activeFilter: null,
-   }
+}
